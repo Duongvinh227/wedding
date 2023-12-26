@@ -374,11 +374,11 @@
 </section>
 <section id="map" class="section-padding">
     <div class="text-center"  id="name-map">
-        <h3>Làm sao để tới đám cưới Nhà Gái?</h3>
+        <h3>Đường tới đám cưới Nhà Gái</h3>
         <p>Nó Thật Đơn Giản</p>
     </div>
     <div class="button-container" style="text-align: center; padding-bottom: 50px;">
-        <button class="btn btn-accent btn-large rsvp-btn btn-ggmap" onclick="toggleVideoSections()">Nhà Trai</button>
+        <button class="btn btn-accent btn-large rsvp-btn btn-ggmap" onclick="toggleVideoSections()">Sang Nhà Trai</button>
     </div>
     <div style="text-align: center">
         <iframe id="map-iframe" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1859.4162650553383!2d105.61367653837263!3d21.238488495153668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDE0JzE4LjYiTiAxMDXCsDM2JzUzLjkiRQ!5e0!3m2!1svi!2s!4v1703506206269!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -400,12 +400,12 @@
 
         if (isVideoState1) {
             // State 1
-            textCenter.innerHTML = '<h3>Làm sao để tới đám cưới Nhà Trai?</h3><p>Nó Thật Đơn Giản</p>'
+            textCenter.innerHTML = '<h3>Đường tới đám cưới Nhà Trai</h3><p>Nó Thật Đơn Giản</p>'
             videoContent.innerHTML = '<h5>Bắc Hà</h5><p>Địa Chỉ Nhà Trai</p>';
             mapIframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.0893401848693!2d104.28798567433576!3d22.538325834227493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36cce3aaaaaaaaab%3A0x8ed8bbdaa36c0c96!2sSao%20Mai%20Bac%20Ha%20Hotel!5e0!3m2!1svi!2sus!4v1703506997076!5m2!1svi!2sus';
         } else {
             // State 2
-            textCenter.innerHTML = '<h3>Làm sao để tới đám cưới Nhà Gái?</h3><p>Nó Thật Đơn Giản</p>'
+            textCenter.innerHTML = '<h3>Đường tới đám cưới Nhà Gái</h3><p>Nó Thật Đơn Giản</p>'
             videoContent.innerHTML = '<h5>Thanh Lãng</h5><p>Địa Chỉ Nhà Gái</p>';
             mapIframe.src = 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1859.4162650553383!2d105.61367653837263!3d21.238488495153668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDE0JzE4LjYiTiAxMDXCsDM2JzUzLjkiRQ!5e0!3m2!1svi!2s!4v1703506206269!5m2!1svi!2s';
         }
@@ -413,7 +413,7 @@
         // Toggle state
         isVideoState1 = !isVideoState1;
         var button = document.querySelector('.btn-ggmap');
-        button.textContent = isVideoState1 ? 'Nhà Trai' : 'Nhà Gái';
+        button.textContent = isVideoState1 ? 'Sang Nhà Trai' : 'Sang Nhà Gái';
     }
 </script>
 
