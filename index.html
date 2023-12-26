@@ -378,43 +378,12 @@
         <p>Nó Thật Đơn Giản</p>
     </div>
     <div class="button-container" style="text-align: center; padding-bottom: 50px;">
-    <button class="btn btn-accent btn-large rsvp-btn btn-ggmap" onclick="toggleVideoSections()">Nhà Trai</button>
-</div>
+        <button class="btn btn-accent btn-large rsvp-btn btn-ggmap" onclick="toggleVideoSections()">Nhà Trai</button>
+    </div>
     <div style="text-align: center">
         <iframe id="map-iframe" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1859.4162650553383!2d105.61367653837263!3d21.238488495153668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDE0JzE4LjYiTiAxMDXCsDM2JzUzLjkiRQ!5e0!3m2!1svi!2s!4v1703506206269!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
-
-<script>
-    var isVideoState1 = true;
-
-    function toggleVideoSections() {
-        // Update the video section
-        var videoSection = document.getElementById('video-bg');
-        var videoContent = videoSection.querySelector('#video-content');
-        var bgndVideo = videoSection.querySelector('.player');
-
-        // Update the map section
-        var mapSection = document.getElementById('map');
-        var mapIframe = mapSection.querySelector('#map-iframe');
-
-        if (isVideoState1) {
-            // State 1
-            videoContent.innerHTML = '<h5>Bắc Hà</h5><p>Địa Chỉ Nhà Trai</p>';
-            mapIframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.0893401848693!2d104.28798567433576!3d22.538325834227493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36cce3aaaaaaaaab%3A0x8ed8bbdaa36c0c96!2sSao%20Mai%20Bac%20Ha%20Hotel!5e0!3m2!1svi!2sus!4v1703506997076!5m2!1svi!2sus';
-            bgndVideo.setAttribute('data-property', "{videoURL:'https://www.youtube.com/watch?v=cssutB8VHgo',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:3, stopAt:30, opacity:1}");
-        } else {
-            // State 2
-            videoContent.innerHTML = '<h5>Thanh Lãng</h5><p>Địa Chỉ Nhà Gái</p>';
-            mapIframe.src = 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1859.4162650553383!2d105.61367653837263!3d21.238488495153668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDE0JzE4LjYiTiAxMDXCsDM2JzUzLjkiRQ!5e0!3m2!1svi!2s!4v1703506206269!5m2!1svi!2s';
-        }
-
-        // Toggle state
-        isVideoState1 = !isVideoState1;
-        var button = document.querySelector('.btn-ggmap');
-        button.textContent = isVideoState1 ? 'Nhà Trai' : 'Nhà Gái';
-    }
-</script>
 
 <section id="eng-pics" class="section-padding">
 
@@ -494,5 +463,38 @@
     ga('create', 'UA-46465113-4', 'auto');
     ga('send', 'pageview');
 </script>
+
+<script>
+    var isVideoState1 = true;
+
+    function toggleVideoSections() {
+        // Update the video section
+        var videoSection = document.getElementById('video-bg');
+        var videoContent = videoSection.querySelector('#video-content');
+        //var bgndVideo = videoSection.querySelector('.player');
+
+        // Update the map section
+        var mapSection = document.getElementById('map');
+        var mapIframe = mapSection.querySelector('#map-iframe');
+
+        if (isVideoState1) {
+            // State 1
+            videoContent.innerHTML = '<h5>Bắc Hà</h5><p>Địa Chỉ Nhà Trai</p>';
+            mapIframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.0893401848693!2d104.28798567433576!3d22.538325834227493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36cce3aaaaaaaaab%3A0x8ed8bbdaa36c0c96!2sSao%20Mai%20Bac%20Ha%20Hotel!5e0!3m2!1svi!2sus!4v1703506997076!5m2!1svi!2sus';
+            //bgndVideo.setAttribute('data-property', "{videoURL:'https://www.youtube.com/watch?v=cssutB8VHgo',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:3, stopAt:30, opacity:1}");
+        } else {
+            // State 2
+            videoContent.innerHTML = '<h5>Thanh Lãng</h5><p>Địa Chỉ Nhà Gái</p>';
+            mapIframe.src = 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1859.4162650553383!2d105.61367653837263!3d21.238488495153668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDE0JzE4LjYiTiAxMDXCsDM2JzUzLjkiRQ!5e0!3m2!1svi!2s!4v1703506206269!5m2!1svi!2s';
+        }
+
+        // Toggle state
+        isVideoState1 = !isVideoState1;
+        var button = document.querySelector('.btn-ggmap');
+        button.textContent = isVideoState1 ? 'Nhà Trai' : 'Nhà Gái';
+    }
+</script>
+
+
 </body>
 </html>
